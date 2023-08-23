@@ -2,19 +2,20 @@ package ru.job4j.loop;
 
 import java.util.StringJoiner;
 
-public class Task18 {
+public class Task47 {
     public static void loop() {
         StringJoiner joiner = new StringJoiner(" ");
-        System.out.println("Начало");
-        for (int i = 10; i <= 19; i++) {
-            if (i % 2 == 0 && i % 4 != 0) {
+        int a, b, c, d;
+        for (int i = 1345; i <= 1445; i++) {
+            a = i % 10;
+            b = i / 10 % 10;
+            c = i / 100 % 10;
+            d = i / 1000 % 10;
+            if (a + b == 5 && c + d == 5) {
                 joiner.add(String.valueOf(i));
-            } else if (i % 4 == 0) {
-                joiner.add(i     + "#");
             }
         }
         System.out.println(joiner);
-        System.out.println("Конец");
     }
 
     public static void main(String[] args) {
