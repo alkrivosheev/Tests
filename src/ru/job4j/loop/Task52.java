@@ -2,7 +2,7 @@ package ru.job4j.loop;
 
 import java.util.StringJoiner;
 
-public class Task51 {
+public class Task52 {
     public static void loop(int n, int m) {
         StringJoiner joiner = new StringJoiner(" ");
         if (n > m) {
@@ -10,17 +10,13 @@ public class Task51 {
             n = m;
             m = x;
         }
-        for (int i = n; i <= m ; i++) {
-            if (i % 2 != 0) {
-                joiner.add(String.valueOf(i * i));
-            } else {
-                joiner.add("0");
-            }
+        for (int i = 0; i < n; i++) {
+            joiner.add(String.valueOf(m + i));
         }
         System.out.println(joiner);
     }
 
     public static void main(String[] args) {
-        loop(7, 2);
+        loop(5, 3);
     }
 }
