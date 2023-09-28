@@ -8,8 +8,29 @@ public class Task169 {
         int columnCount = in.nextInt();
         String star = "*";
         String space = " ";
-        for (int i = columnCount; i >= 1 ; i--) {
-            System.out.print(star);
+        int count = columnCount;
+        int spCount = 0;
+        while (count > 1) {
+            for (int i = 1; i <= spCount / 2; i++) {
+                System.out.print(space);
+            }
+            for (int i = 1; i <= count; i++) {
+                System.out.print(star);
+            }
+            System.out.println();
+            count -= 2;
+            spCount += 2;
+        }
+        while (count <= columnCount) {
+            for (int i = 1; i <= spCount / 2; i++) {
+                System.out.print(space);
+            }
+            for (int i = 1; i <= count; i++) {
+                System.out.print(star);
+            }
+            System.out.println();
+            count += 2;
+            spCount -= 2;
         }
     }
 }
